@@ -3,10 +3,20 @@
 <html>
 <head>
 	<title>HTML PAGE</title>
+	<style>
+		div {
+			background-image: url(C:\Users\Alka\Downloads\cellphone.jpg);
+		    background-attachment: fixed;
+            background-size: cover;
+            background-size: 100% 100%;
+		}
+	</style>
 </head>
 <body>
+
 	<a href="htmllog.html">Go to htmllog</a>
 	<hr>
+	<a> <img src="C:\Users\Alka\Downloads\pic_trulli.jpg" style="float:right;width: 400px;"></a>
 	<!-- heading -->
 <h1  align="center"> Html@world</h1>
 <h2 align="center"> Html@world</h2>
@@ -15,6 +25,7 @@
 <h5 align="center"> Html@world</h5>
 <h6 align="center"> Html@world</h6>
 <!-- paragraph -->
+<hr>
 <p> HTML is the language in which most websites are written. HTML is used to create pages and make them functional.
 
 <strong>The code used </strong>to make them visually appealing is known as CSS and we shall focus on this in a later tutorial. For now, we will focus on teaching you how to build rather than design.
@@ -30,7 +41,8 @@ Hypertext means that the document contains links that allow the reader to jump t
 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+</p><br>
+<hr>
 <!-- list -->
 <ul>
 	<li>mango</li>
@@ -44,7 +56,9 @@ Hypertext means that the document contains links that allow the reader to jump t
     <li>banana</li>
     <li>orange</li>
 </ol>
+<hr>
 <!-- table -->
+<div>
 <table>
 	<thead>
 		<tr>
@@ -71,6 +85,7 @@ Hypertext means that the document contains links that allow the reader to jump t
 		</tr>
 	</tbody>
 </table>
+</div>
 <br>
 <hr>
 <br>
@@ -122,12 +137,32 @@ Hypertext means that the document contains links that allow the reader to jump t
 <br>
 <!-- image-->
 <a href="E:\html@world/flower.jpg"></a>
-<img src="E:\html@world/flower.jpg" alt="simple image" width="200">
+<img src="E:\html@world\flower.jpg" alt="simple image" width="200">
 
 <p> this <abbr title=" world wide web">WWW </abbr>is awesome</p>
+<br>
+<hr height="30%">
+<img src="C:\Users\Alka\Downloads\workplace.jpg" alt="Workplace" usemap="#workarea">
+<map name="workarea">
+	<area shape="circle" coords="337,300,44" href="about.html" onclick="myFunction()">
+</map>
 
+<script>
+	function myFunction() {
+		alert("you click the coffee cup!");
+	}
+</script>
+
+<hr>
+<h2>picture</h2>
+<picture>
+  <source media="(min-width: 750px)" srcset="C:\Users\Alka\Downloads\img_food.jpg">
+  <source media="(min-width: 540px)" srcset="C:\Users\Alka\Downloads\img_car.jpg">
+  <img src="C:\Users\Alka\Downloads\img_girl.jpg" style="width:auto;">
+</picture>
+<br>
 <p><cite> html crash course </cite> by ABC</p>
-
+<br>
 <div style="margin-top: 500px"></div>
 
 </body>

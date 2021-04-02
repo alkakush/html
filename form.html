@@ -3,20 +3,26 @@
 <head>
 	<title>login form</title>
 	<style type="text/css">
-		#body{
+		body{
 			background-color: gray;
 			color: black;
 			border: pink;
+            margin-top: 1em;
+            margin-left: 30%;
+
 
 		}
-		
+		input{
+            border: 3px solid green;
+            padding: 3px;
+        }
 	</style>
 </head>
-<body id="body" >
+<body>
 	
 	<h1>Sign Up</h1>
 	<p><b>It's free and always will be.</b></p>
-<form method="POST" action="process.php" >
+<form method="post" action="http://google.com" >
 	<div >
 	 <input  type="First name" name="First name" placeholder="First Name">
      <input type="Last name" name="Last name" placeholder="Last Name">
@@ -31,7 +37,7 @@
     	<input type="password" name="password" placeholder="Enter new password" size="45%">
     </div>
     <div>
-    	<p>Birthday</p>
+    	<p align="none">Birthday</p>
     	<input type="Date" name="Birthday">
     </div><br>
     <div>
@@ -39,8 +45,19 @@
     	<input type="radio" name="gender">femail
     </div><br>
     <div>
-        <input title="click to submit" type="image" alt="submit" width="40" height="40" src="E:\github@world\html@world/Screenshot (3).png"> 
-    </div>
+        <input type="checkbox" name="food" id="food1" value="mango">
+        <label for="food1" > mango</label>
+        <input type="checkbox" name="food" id="food2" value="papaya">
+        <label for="food2"> papaya</label>
+        <input type="checkbox" name="food" id="food3" value="banana">
+        <label for="food3">banana</label>
+    </div><br>
+    <div>
+        <input title="click to submit" type="image" alt="submit" width="40" height="40" src="E:\github@world\html@world/Screenshot (3).png" style="float:center;width:42px;height:42px;"> 
+    </div><br>
+    <iframe src="C:\Users\Alka\Downloads\img_car.jpg" name="show" height="400px" width="100%" title="about header tag"></iframe>
+    <p><a href="htmllog.html" target="show"> header tag</a></p>
+
 
 </form>
 </body>
