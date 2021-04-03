@@ -8,7 +8,8 @@
 			color: black;
 			border: pink;
             margin-top: 1em;
-            margin-left: 30%;
+            margin-left: 20%;
+            margin-right: 20%;
 
 
 		}
@@ -19,26 +20,47 @@
 	</style>
 </head>
 <body>
-	
 	<h1>Sign Up</h1>
-	<p><b>It's free and always will be.</b></p>
-<form method="post" action="http://google.com" >
+   
+    <p><b>It's free and always will be.</b></p>
+<form method="get" action="form.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)" >
+     <div align="left">
+      <label for="gsearch" >Search Google:</label>
+     <input type="search" id="gsearch" name="gsearch">  
+     </div><br><br>
+    
 	<div >
-	 <input  type="First name" name="First name" placeholder="First Name">
-     <input type="Last name" name="Last name" placeholder="Last Name">
+        <label for="fname">Firstname</label>
+	 <input  type="First name" id="fname" name="fname" placeholder="First Name">
+     <label for="lname">Lastname</label>
+     <input type="Last name" id="lname" name="lname" placeholder="Last Name" disabled>
     </div><br>
     <div >
-    	<input type="email" name="email" placeholder="enter email" size="45%">
+        <label for="mail">Email address</label>
+    	<input type="email" id="mail" name="mail" placeholder="enter email" size="45%">
     </div><br>
     <div >
-    	<input type="email" name="phone number" placeholder="Phone number or emai address" size="45%">
+        <label for="mob">mobile number</label>
+    	<input type="number" id="mob" name="number" placeholder="Phone number" size="45%" >
     </div><br>
     <div>
-    	<input type="password" name="password" placeholder="Enter new password" size="45%">
-    </div>
+        <label for="pwd">Password</label>
+    	<input type="password" id="pwd" name="pwd" placeholder="Enter new password" size="45%" max="10" min="6" step="5">
+    </div><br>
+   <!-- <div>
+    	<label for="datemax">Birthday</label>
+    	<input type="Date" id="datemax"  name="Birthday" max="2015-01-01">
+    </div><br>
     <div>
-    	<p align="none">Birthday</p>
-    	<input type="Date" name="Birthday">
+        <label for="bdymonth">bdy (month and year)</label>
+        <input type="month" id="bdymonth" name="bdymonth">
+
+      </div><br>
+
+    -->
+    <div>
+        <label for="Birthdaytime">Birthday</label>
+        <input type="datetime-local" id="Birthdaytime"  name="Birthday" >
     </div><br>
     <div>
     	<input type="radio" name="gender">Male
@@ -50,14 +72,70 @@
         <input type="checkbox" name="food" id="food2" value="papaya">
         <label for="food2"> papaya</label>
         <input type="checkbox" name="food" id="food3" value="banana">
-        <label for="food3">banana</label>
+        <label for="food3">banana</label><br>
+
+
+        <label for="favcolor"> select favorite color:</label>
+        <input type="color" name="favcolor" id="favcolor" value="#ffff00" >
+    </div>
+    <br>
+    <div>
+        <fieldset>
+            <legend>Bank Details:</legend>
+            <div>
+            <label for="bname">Bank Name:</label>
+            <input type="text" name="bname" id="bname"></div><br>
+            <div>
+            <label for="account">account number </label>
+            <input type="number" name="account" id="account">
+            <input type="hidden" id="nothing" name="nothing" value="23456"><!-- hide the name-->
+             </div>
+        </fieldset>
     </div><br>
     <div>
-        <input title="click to submit" type="image" alt="submit" width="40" height="40" src="E:\github@world\html@world/Screenshot (3).png" style="float:center;width:42px;height:42px;"> 
+        <label for="myfile"> select file:</label>
+        <input type="file" id="myfile" name="myfile">
     </div><br>
-    <iframe src="C:\Users\Alka\Downloads\img_car.jpg" name="show" height="400px" width="100%" title="about header tag"></iframe>
-    <p><a href="htmllog.html" target="show"> header tag</a></p>
+    <div>Subject:
+        <input list="subject" placeholder="select subject">
+        <datalist id="subject">
+            <option value=" C, C++">
+            <option value=" Java" >
+            <option value=" Python">
+            <option value=" Cloud Computing">
+            <option value=" HTML">
+        </datalist>
+    </div><br>
+    <div>
+     <label for="city"> select city</label>
+     <select id="city" name="city" size="3" multiple >
+         <option value="Gorakhpur" selected="">Gorakhpur</option>
+         <option value="Padrauna">Padrauna</option>
+         <option value="Delhi">Delhi</option>
+         <option value="Pune">Pune</option>
+         <option value="kushinagar">kushinagar</option>
+         <option value="nepal">nepal</option>
+     </select></div><br>
+     <div>message
+     <textarea name="message" rows="10" cols="40"></textarea></div><br><br><br>
+      <div>
+        <fieldset>
+            <legend>calculation:</legend>
+         <input type="range"  id="a" name="a" value="50">
+         100 +
+         <input type="number" name="b" id="b" value="0"> 
+         = 
+         <output name="x" for="a b"></output></fieldset>
+      </div><br>
 
+    <!-- <button type="button" onclick="alert('submit this')">submit</button>-->
+    <input type="reset" name="reset">
+ </div><br>
+    <div>
+        <input title="click to submit" type="image" alt="submit" width="40" height="40" src="E:\github@world\html@world/Screenshot (3).png" style="float:center;width:42px;height:42px;" onclick="alert('submit')"> 
+    </div><br>
+    
+    
 
 </form>
 </body>
