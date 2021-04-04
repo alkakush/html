@@ -23,29 +23,36 @@
 	<h1>Sign Up</h1>
    
     <p><b>It's free and always will be.</b></p>
-<form method="get" action="form.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)" >
+<form method="get" action="form.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)" autocomplete="on" >
      <div align="left">
       <label for="gsearch" >Search Google:</label>
      <input type="search" id="gsearch" name="gsearch">  
      </div><br><br>
-    
+    <div>
+        <label for="aTime">select time:</label>
+        <input type="time" id="aTime" name="aTime">
+    </div><br>
+    <div>
+        <label for="week"> select week:</label>
+        <input type="week" id="week" name="week">
+    </div><br>
 	<div >
         <label for="fname">Firstname</label>
-	 <input  type="First name" id="fname" name="fname" placeholder="First Name">
+	 <input  type="First name" id="fname" name="fname" placeholder="First Name" maxlength="30" autofocus >
      <label for="lname">Lastname</label>
      <input type="Last name" id="lname" name="lname" placeholder="Last Name" disabled>
     </div><br>
     <div >
         <label for="mail">Email address</label>
-    	<input type="email" id="mail" name="mail" placeholder="enter email" size="45%">
+    	<input type="email" id="mail" name="mail" placeholder="enter email" size="45%"  autocomplete="off">
     </div><br>
     <div >
         <label for="mob">mobile number</label>
-    	<input type="number" id="mob" name="number" placeholder="Phone number" size="45%" >
+    	<input type="number" id="mob" name="number" placeholder="Phone number" size="45%"  required>
     </div><br>
     <div>
         <label for="pwd">Password</label>
-    	<input type="password" id="pwd" name="pwd" placeholder="Enter new password" size="45%" max="10" min="6" step="5">
+    	<input type="password" id="pwd" name="pwd" placeholder="Enter new password" >
     </div><br>
    <!-- <div>
     	<label for="datemax">Birthday</label>
@@ -62,9 +69,9 @@
         <label for="Birthdaytime">Birthday</label>
         <input type="datetime-local" id="Birthdaytime"  name="Birthday" >
     </div><br>
-    <div>
+    <div >
     	<input type="radio" name="gender">Male
-    	<input type="radio" name="gender">femail
+    	<input type="radio" name="gender" checked>femail
     </div><br>
     <div>
         <input type="checkbox" name="food" id="food1" value="mango">
@@ -84,17 +91,17 @@
             <legend>Bank Details:</legend>
             <div>
             <label for="bname">Bank Name:</label>
-            <input type="text" name="bname" id="bname"></div><br>
+            <input type="text" name="bname" id="bname" value="Indian Bank" required readonly></div><br>
             <div>
             <label for="account">account number </label>
             <input type="number" name="account" id="account">
-            <input type="hidden" id="nothing" name="nothing" value="23456"><!-- hide the name-->
+            <input type="hidden" id="nothing" name="nothing" value="23456" ><!-- hide the name-->
              </div>
         </fieldset>
     </div><br>
     <div>
         <label for="myfile"> select file:</label>
-        <input type="file" id="myfile" name="myfile">
+        <input type="file" id="myfile" name="myfile" multiple>
     </div><br>
     <div>Subject:
         <input list="subject" placeholder="select subject">
@@ -107,7 +114,7 @@
         </datalist>
     </div><br>
     <div>
-     <label for="city"> select city</label>
+     <label for="city" > select city</label>
      <select id="city" name="city" size="3" multiple >
          <option value="Gorakhpur" selected="">Gorakhpur</option>
          <option value="Padrauna">Padrauna</option>
@@ -119,13 +126,22 @@
      <div>message
      <textarea name="message" rows="10" cols="40"></textarea></div><br><br><br>
       <div>
-        <fieldset>
-            <legend>calculation:</legend>
-         <input type="range"  id="a" name="a" value="50">
+        <fieldset >
+            <legend >calculation:</legend>
+         <input type="range"  id="a" name="a" value="50" >
          100 +
          <input type="number" name="b" id="b" value="0"> 
          = 
          <output name="x" for="a b"></output></fieldset>
+      </div><br>
+
+      <div>
+      <label for="quantity">Quantity (between 1 and 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5" step="3"></div><br>
+
+      <div>
+          <label for="pin">Pin:</label>
+          <input type="number" id="pin" name="pin" placeholder="enter 4 dijit pin" maxlength="4">
       </div><br>
 
     <!-- <button type="button" onclick="alert('submit this')">submit</button>-->
